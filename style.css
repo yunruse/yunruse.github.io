@@ -1,0 +1,76 @@
+a {
+  color: rgb(255, 122, 209);
+}
+
+a:visited {
+  color: rgb(164, 59, 128);
+}
+
+header {
+  font-size: 24pt;
+  font-weight: bold;
+}
+
+header img {
+  display: inline;
+  height: 64px;
+  margin: 0
+}
+
+li a {
+  font-weight: bold
+}
+
+.emojis {
+  text-align: center;
+  letter-spacing: 2em;
+  opacity: 0.25
+}
+
+body {
+  background-color: #DA047D;
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+content {
+  display: inline-block;
+  position: relative;
+  background-color: white;
+  width: 99%;
+  max-width: 90vw;
+  padding: 1em;
+}
+
+.banner {
+  background-image: url(zune.png);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  display: block;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  max-width: 800px;
+  left: 0;
+}
+
+.banner2 {
+  display: block;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(340deg, #FD7928 0em, #DA047D 20em);
+}
+
+.spacer {
+  height: 50vh;
+  max-height: 50vw;
+}
+
+@media (min-width: 800px) {
+  .spacer {
+    max-height: 400px;
+  }
+}
