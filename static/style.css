@@ -6,9 +6,10 @@ a:visited {
   color: rgb(164, 59, 128);
 }
 
-header {
-  font-size: 24pt;
-  font-weight: bold;
+header p {
+  display: inline;
+  font-size: 1.25em;
+  font-weight: bolder;
 }
 
 header img {
@@ -24,7 +25,8 @@ li a {
 .emojis {
   text-align: center;
   letter-spacing: 2em;
-  opacity: 0.25
+  opacity: 0.25;
+  cursor: default;
 }
 
 body {
