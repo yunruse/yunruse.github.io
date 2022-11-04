@@ -22,13 +22,6 @@ li a {
   font-weight: bold
 }
 
-.emojis {
-  text-align: center;
-  letter-spacing: 2em;
-  opacity: 0.25;
-  cursor: default;
-}
-
 body {
   background-color: #DA047D;
   background-repeat: no-repeat;
@@ -75,4 +68,30 @@ content {
   .spacer {
     max-height: 400px;
   }
+}
+
+.emojis {
+  text-align: center;
+  letter-spacing: 2em;
+  opacity: 0.25;
+  cursor: default;
+  margin-bottom: 0.5em;
+}
+
+.vibes .blinkies {
+  opacity: 0;
+}
+
+.vibes:hover .blinkies {
+  opacity: 1;
+}
+
+.blinkies img {
+  height: 20px;
+  image-rendering: pixelated;
+  margin: 0;
+}
+
+.blinkies a:hover {
+  border: none;
 }
