@@ -37,12 +37,12 @@
             <p>Solar system:</p>
             :solar/mercury:
             :solar/venus:
-            :solar/earth:
-            <span class='moon'>:solar/moon:</span>
+            <span class='earth'>:solar/earth:</span>
+            :solar/moon:
             :solar/mars:
             :solar/ceres:
             :solar/jupiter:
-            <span class='saturn'>:solar/saturn:</span>
+            :solar/saturn:
             :solar/saturn1::solar/saturn2:
             :solar/uranus:
             :solar/neptune:
@@ -64,7 +64,6 @@
                 /:([_a-z0-9/]+):/g,
                 `<img src="static/emoji/$1.png" title="$1" width=32>`)
         </script>
-        <!-- I was bored okay -->
         <style>
             #emoji {
                 padding: 1em;
@@ -86,22 +85,12 @@
                 width: 32px;
             }
 
-            .saturn img,
-            .moon img {
+            .earth img {
                 transition: transform 1s;
             }
 
-            .saturn:hover img {
-                transform: rotate(360deg);
-            }
-
-            .moon img {
-                padding-left: 70px;
-                margin-left: -70px;
-            }
-
-            .moon:hover img {
-                transform: rotate(360deg);
+            .earth:hover img {
+                transform: rotate(180deg);
             }
         </style>
     </content>
