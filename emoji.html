@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="utf8">
+    <title>Discord emoji · Mia yun Ruse</title>
+    <link rel="stylesheet" href="static/normalize.css">
+    <link rel="stylesheet" href="https://unpkg.com/sakura.css/css/sakura.css" type="text/css">
+    <link rel="stylesheet" href="static/style.css" type="text/css">
+    <link rel="apple-touch-icon" sizes="180x180" href="static/icon180.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="static/icon512.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="static/icon32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="static/icon16.png">
+    <link rel="manifest" href="static/site.webmanifest">
+</head>
+
+<body>
+    <div class="bottom-right-gradient"></div>
+    <content>
+        <header>
+            <a href="/">
+                <h3>
+                    <img width="64" src="static/icon512.png">
+                    Mia yun Ruse
+                </h3>
+            </a>
+            <h1>Custom Discord emoji</h1>
+        </header>
+        <p>
+            Feel free to download and use! You can also download direct from the
+            <a href="https://github.com/yunruse/yunruse.github.io/tree/production/static/emoji">GitHub directory</a>
+            if that's quicker.
+        </p>
+        <noscript>
+            You'll need Javascript to view the emoji on this page!
+        </noscript>
+        <div id="emoji">
+            <p>Solar system:</p>
+            :solar/mercury:
+            :solar/venus:
+            :solar/earth:
+            <span class='moon'>:solar/moon:</span>
+            :solar/mars:
+            :solar/ceres:
+            :solar/jupiter:
+            <span class='saturn'>:solar/saturn:</span>
+            :solar/saturn1::solar/saturn2:
+            :solar/uranus:
+            :solar/neptune:
+            :solar/pluto:
+            :solar/charon:
+            <p>General emoji:</p>
+            :ben_affleck_ugh: :juwust: :now_perish: :pinkandbluefloyd:
+            :its_a_trap:
+            :lime:
+            :artemis1:
+            :triforce:
+            <span class="hor">:hor:<span class="se">:sehor:</span>:se:</span>
+            <br>
+        </div>
+        <script>
+            emoji.innerHTML = emoji.innerHTML.replaceAll(
+                /:([_a-z0-9/]+):/g,
+                `<img src="static/emoji/$1.png" title="$1" width=32>`)
+        </script>
+        <!-- I was bored okay -->
+        <style>
+            #emoji {
+                padding: 1em;
+                background-color: #36393F;
+                color: #DCDDDE;
+            }
+
+            img {
+                margin: 0;
+            }
+
+            .se img {
+                width: 0;
+                height: 32px;
+                transition: width 1s;
+            }
+
+            .hor:hover .se img {
+                width: 32px;
+            }
+
+            .saturn img,
+            .moon img {
+                transition: transform 1s;
+            }
+
+            .saturn:hover img {
+                transform: rotate(360deg);
+            }
+
+            .moon img {
+                padding-left: 70px;
+                margin-left: -70px;
+            }
+
+            .moon:hover img {
+                transform: rotate(360deg);
+            }
+        </style>
+    </content>
+</body>

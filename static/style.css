@@ -15,16 +15,15 @@ header p {
 header img {
   display: inline;
   height: 64px;
-  margin: 0
+  margin: 0;
 }
 
 li a {
-  font-weight: bold
+  font-weight: bold;
 }
 
 body {
   background-color: #DA047D;
-  background-repeat: no-repeat;
   margin: 0;
   padding: 0;
   height: 100%;
@@ -39,7 +38,9 @@ content {
   padding: 1em;
 }
 
-.banner {
+/* Gradienting */
+
+.zune-header {
   background-image: url(zune.png);
   background-size: 100%;
   background-repeat: no-repeat;
@@ -51,7 +52,30 @@ content {
   left: 0;
 }
 
-.banner2 {
+
+.zune-spacer-mainpage {
+  height: 50vh;
+  max-height: 50vw;
+}
+
+@media (min-width: 800px) {
+  .zune-spacer-mainpage {
+    max-height: 400px;
+  }
+}
+
+.zune-spacer {
+  height: 20vh;
+  max-height: 20vw;
+}
+
+@media (min-width: 800px) {
+  .zune-spacer {
+    max-height: 150px;
+  }
+}
+
+.bottom-right-gradient {
   display: block;
   position: fixed;
   height: 100%;
@@ -59,16 +83,8 @@ content {
   background: linear-gradient(340deg, #FD7928 0em, #DA047D 20em);
 }
 
-.spacer {
-  height: 50vh;
-  max-height: 50vw;
-}
 
-@media (min-width: 800px) {
-  .spacer {
-    max-height: 400px;
-  }
-}
+/* Main page: vibey things */
 
 .emojis {
   text-align: center;
