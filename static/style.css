@@ -1,3 +1,9 @@
+/* General HTML */
+
+li {
+  list-style: "- ";
+}
+
 a {
   color: rgb(255, 122, 209);
 }
@@ -5,6 +11,8 @@ a {
 a:visited {
   color: rgb(164, 59, 128);
 }
+
+/* Header */
 
 header p {
   display: inline;
@@ -16,10 +24,6 @@ header img {
   display: inline;
   height: 64px;
   margin: 0;
-}
-
-li a {
-  font-weight: bold;
 }
 
 body {
@@ -37,6 +41,26 @@ content {
   max-width: 90vw;
   padding: 1em;
 }
+
+/* Segments */
+
+h2 {
+  display: none;
+}
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 1em;
+}
+
+article {
+  background-color: hsl(320, 100%, 99%);
+  flex: 200px 1 1;
+  margin-right: 10px;
+  padding: 5px;
+}
+
 
 /* Gradienting */
 
