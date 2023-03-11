@@ -135,3 +135,7 @@ article {
 .blinkies a:hover {
   border: none;
 }
+
+#emoji p {
+  margin-bottom: 0;
+}
