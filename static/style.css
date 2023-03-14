@@ -110,22 +110,6 @@ article {
 
 /* Main page: vibey things */
 
-.emojis {
-  text-align: center;
-  letter-spacing: 2em;
-  opacity: 0.25;
-  cursor: default;
-  margin-bottom: 0.5em;
-}
-
-.vibes .blinkies {
-  opacity: 0;
-}
-
-.vibes:hover .blinkies {
-  opacity: 1;
-}
-
 .blinkies img {
   height: 20px;
   image-rendering: pixelated;
@@ -138,4 +122,21 @@ article {
 
 #emoji p {
   margin-bottom: 0;
+}
+
+.counter {
+  background: blue;
+  padding-left: 40px;
+  padding-right: 40px;
+  animation: 30s linear rotate infinite;
+}
+
+@keyframes rotate {
+  0% {
+    filter: hue-rotate(0deg) brightness(500%);
+  }
+
+  100% {
+    filter: hue-rotate(360deg) brightness(500%);
+  }
 }
