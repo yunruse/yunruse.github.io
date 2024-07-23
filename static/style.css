@@ -110,6 +110,10 @@ article {
 
 /* Main page: vibey things */
 
+.blinkies {
+  text-align: center;
+}
+
 .blinkies img {
   height: 20px;
   image-rendering: pixelated;
