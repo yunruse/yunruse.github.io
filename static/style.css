@@ -65,6 +65,11 @@ article {
   margin-bottom: 10px;
   padding: 5px;
 }
+article img {
+  margin: none;
+  float: right;
+  transform: translateY(5px);
+}
 
 
 /* Gradienting */
@@ -117,12 +122,28 @@ article {
 
 .blinkies {
   text-align: center;
+  background-color: transparent;
+  z-index: 1;
+  position: relative;
 }
+.blinkies::before {
+  content: " ";
+  position: absolute;
+  top: 0; 
+  left: 0;
+  width: 100%; 
+  height: 100%;  
+  opacity: .3; 
+  z-index: -1;
+  background-image: url('sea.gif');
+}
+
 
 .blinkies img {
   height: 20px;
   image-rendering: pixelated;
   margin: 0;
+  z-index: 1;
 }
 
 .blinkies a:hover {
