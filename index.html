@@ -20,28 +20,82 @@
   <div class="zune-spacer-mainpage"></div>
   <content>
     <header>
-      <img src="static/sticker.png">
-      <p>Hey hi howdy!</p>
+      <h1 style="margin-top: -17px">
+        Hey hi howdy!
+        <img src="static/sticker.png">
+      </h1>
     </header>
     <p>
-      I'm Mia, a data witch. I love queer fiction, wholewheat bagels, <i>really</i> sour sweets, <a href="http://yunru.se/static/sword.png">my sword</a>, and
-      <a href="music.jpg">these albums</a>.
+      I'm Mia, a data witch. I love <i>really</i> sour sweets, Peregrin Took, RSS readers, nature,
+      fencing (yop) and <a href="music.jpg">these albums</a>. I've also made:
     </p>
     <main>
 
+      <article style="flex: 100%;">
+        <h2>Writing</h2>
+        <ul>
+          <li>
+            <i>Witch and Sun</i>, a novel; the project closest to my heart.
+            <br>
+            <a href="https://trackbear.app/@yunruse" id="writingProgress">Track my progress!</a>
+
+            <script>
+              fetch('https://trackbear.app/api/v1/profile/yunruse')
+                .then(x => x.json())
+                .then(json => {
+                  let lastUpdated = json.data.recentActivity.pop().date
+                  let daysAgo = Math.round((new Date() - new Date('2025-04-01')) / (24 * 60 * 60 * 1000))
+                  let relative
+                  switch (daysAgo) {
+                    case 0: relative = 'today'; break;
+                    case 1: relative = 'yesterday'; break;
+                    default: relative = `${daysAgo} days ago`; break;
+                  }
+                  let K = Math.round(json.data.lifetimeTotals.word / 100) / 10
+                  writingProgress.innerHTML = `
+                    Track my progress: as of <b>${relative}</b>
+                    I've wrote <b>${K}K words</b>!`
+                })
+            </script>
+
+
+          </li>
+          <li>
+            A whole bunch of <a href="httpsho://en.wikipedia.org/wiki/User:Mia_yun_Ruse">Wikipedia</a> edits
+          </li>
+          <li>
+            a dissertation for MPhys Computational Physics at Edinburgh (with <a href="https://crover.tech">Crover</a>)
+        </ul>
+      </article>
+
       <article>
-        <h2>Python projects</h2>
+        <h2>Web projects</h2>
+        <ul>
+          <li>
+            <a href="https://miku.earth">miku.earth</a>, a collection of over 3,000 cultural self-representations
+          </li>
+          <li>
+            <a href="/tarot">A Tarot shuffler</a>, for drawing silly cards and sharing a PNG
+          </li>
+          <li>
+            <a href="/mnac">Meta Noughts and Crosses</a>, the tactical twist on the classic game
+          </li>
+        </ul>
+      </article>
+
+      <article>
+        <h2>Python packages</h2>
         <p>
-          I've published a few Python packages! You can <code>pip install</code>:
+          You can <code>pip install</code>:
         </p>
         <ul>
           <li>
             <a href="https://pepy.tech/projects/battery"><img src="https://static.pepy.tech/badge/battery"></a>
-            <code><a href="https://github.com/yunruse/battery">battery</a></code> for battery information
+            <code><a href="https://github.com/yunruse/battery">battery</a></code> for info on… I'll let you guess
           </li>
           <li>
             <a href="https://pepy.tech/projects/noether"><img src="https://static.pepy.tech/badge/noether"></a>
-            <code><a href="https://github.com/yunruse/Noether">noether</a></code> for unit calculations
+            <code><a href="https://github.com/yunruse/Noether">noether</a></code> for unit catalogue & calculation
 
           </li>
           <li>
@@ -50,47 +104,20 @@
             for editing <a href="https://www.pixelmator.com/pro/">Pixelmator</a> files
           </li>
           <li>
-            <!-- <a href="https://pepy.tech/projects/openapi-transmog"><img src="https://static.pepy.tech/badge/openapi-transmog"></a> -->
+            <a href="https://pepy.tech/projects/openapi-transmog"><img
+                src="https://static.pepy.tech/badge/openapi-transmog"></a>
             <code><a href="https://github.com/yunruse/openapi-transmog">openapi-transmog</a></code>
             for turning OpenAPI specs into Python
           </li>
-          <!-- <li>
-            <! -- <a href="https://pepy.tech/projects/nationalrail"><img src="https://static.pepy.tech/badge/nationalrail"></a> -- >
-            <code><a href="https://github.com/yunruse/nationalrail">nationalrail</a></code>
-            for fetching train times in the UK
-          </li> -->
         </ul>
       </article>
 
-      <article>
-        <h2>Other projects</h2>
-        <p>
-          What else? Let's see:
-        </p>
-        <ul>
-          <li>
-            <a href="/dear-ocean">Dear Ocean</a>, an experimental respiratory tracker
-          </li>
-          <li>
-            <a href="https://miku.earth">miku.earth</a>, a collection of over 3,000 cultural self-representations
-          <li>
-            <i>Witch and Sun</i>, a novel
-          </li>
-        </ul>
-        <p>I've also made:</p>
-        <ul>
-          <li>
-            <a href="/mnac">Meta Noughts and Crosses</a> (online!), the tactical twist on the classic game
-          </li>
-          <li>
-            A whole bunch of <a href="httpsho://en.wikipedia.org/wiki/User:Mia_yun_Ruse">Wikipedia</a> edits
-          </li>
-          <li>
-            MPhys Computational Physics at Edinburgh (dissertation was with <a href="https://crover.tech">Crover</a>)
-          </li>
-        </ul>
-      </article>
     </main>
+
+    <p>
+      ...amongst other things. Have a wonderful day, and don't forget to stay hydrated! 🐝
+    </p>
+
     <p class="blinkies">
       <!-- 2007 called ;) -->
       <a href="https://blinkies.cafe"><img src="static/blinkies!/general.gif"></a>
